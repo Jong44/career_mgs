@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+
+body{
+    background-color: #E9F0FF;
+    font-family: Poppins;
+}
+
+.konten .bg{
+    display: flex;
+}
+
+.konten .bg .kanan img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    width: 33%;
+    max-width: 40%;
+}
+
+.konten .bg .kiri img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 33%;
+    max-width: 37%;
+}
+/* img{
+    width: 10%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+} */
+
+.konten .text{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.konten .text p{
+    font-size: 18px;
+    color: #ADADAD;
+    margin-top: 5px;
+    
+}
+
+.konten .text .mgs p{
+    font-size: 46px;
+    font-weight: bold;
+    margin: -20px 0;
+    background: linear-gradient(to right, #4A7CDE 0%, #15ACCE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.konten .text .up p{
+    font-size: 25px;
+    font-weight: 400 ;
+    color: #515151;
+}
+
+a{
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+    color:#ADADAD;
+}
+
+a:hover{
+    color: #4A7CDE;
+}
+
+.konten .form{
+    /* #E9F3FF */
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 29%;
+    max-width: 30%;
+    position: absolute;
+    left: 150px;
+    padding: 10px 10px 50px;
+}
+
+label{
+    color: #ADADAD;
+}
+
+input{
+    border: none;
+    border-radius: 10px;
+}
+
+button{
+    width: 30%;
+    max-width: 30%;
+    margin-top: 10%;
+}
+
+.btn-primary{
+    background: linear-gradient(to left, #15ACCE -8.04%, #4A7CDE 100%);
+    border: transparent;
+    margin-right: 15%;
+}
+

@@ -1,0 +1,1485 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar */
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    background: #f5f6fa;
+    color: white;
+    height: 100%;
+}
+
+.content .cart{
+    width: 1050px;
+    height: 500px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+#btnDelete, #close{
+    cursor: pointer;
+}
+
+.alert{
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 3;
+    background-color: #1e1e1e9f;
+
+}
+
+.content-alert{
+    position: fixed;
+    z-index: 20;
+    display: none;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background-color: white;
+    color: black;
+    opacity: 1;
+    border-radius: 10px;
+    left: 700px;
+    top: 300px;
+}
+
+.content-alert .head{
+    display: flex;
+    width: inherit;
+    height: 50px;
+    background-color: #C8315A;
+    border-radius: 10px 10px 0 0;
+    padding: 13px 10px;
+    color: white;
+}
+
+.content-alert .head p{
+    width: 50%;
+}
+
+.content-alert .head span.close{
+    width: 50%;
+    text-align: right;
+    padding: 5px 10px; 
+}
+
+.content-alert .body {
+    padding: 20px; 
+    height: 100px;
+}
+
+.content-alert .footer{
+    width: inherit;
+    height: 50px;
+    border-radius: 0 0 10px 10px;
+    padding: 13px ;
+    text-align: right;
+}
+
+.content-alert .footer button{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.footer a.alert-red{
+    padding: 3px 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: #C8315A;
+    color: white;
+    font-size: 13px;
+}
+
+.footer button.alert-white{
+    background-color: transparent;
+    color: #C8315A;
+}
+
+
+
+
+
+a.btn-white{
+    text-decoration: none;
+    background-color: transparent;
+    border: #15ACCE solid 1px;
+    color: #15ACCE;
+    text-align: center;
+    border-radius: 5px;
+}
+
+a.btn, a.btn-delete{
+    background: linear-gradient(270deg, #4A7CDE -5.45%, #15ACCE 100%);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+a.btn:hover, button:hover{
+    background: white;
+    border: #15ACCE solid 1px;
+    color: #15ACCE;
+}
+
+#minimize, #maximize{
+    font-size: 20px;
+}
+
+#maximize{
+    display: none;
+}
+
+.wrapper .sidebar{
+    background: #4A7CDE;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 350px;
+    height: 100%;
+    transition: all 0.5s ease;
+    height: 100%;
+    padding: 30px;
+}
+
+.wrapper .sidebar .profile{
+    padding: 50px 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    display: block;
+}
+
+.wrapper .sidebar .profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.wrapper .sidebar .profile p.nama{
+    margin: 5px 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.wrapper .sidebar .profile p.class{
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+#menu{
+    display: block;
+}
+
+
+
+.wrapper .sidebar ul li a{
+    color: white;
+    font-size: 17px;
+    margin: 25px 0px;
+}
+
+.wrapper .sidebar ul li a .icon {
+    background-color: #FFFFFF1A;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-right: 15px ;
+}
+
+/* Sidebar */
+
+/* header */
+
+.row {
+    display: flex;
+    margin: 30px 0;
+}
+
+.col1{
+    width: 50% ;
+}
+
+.col1 a{
+    text-decoration: none;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    background: linear-gradient(to left, #4A7CDE, #15ACCE);
+    padding: 15px 15px;
+    color: white;
+    font-size: 17px;
+}
+
+.col2{
+    display: flex;
+    color: #4A7CDE;
+    width: 50%;
+    font-size: 20px;
+}
+
+.col2 a{
+    color: #4A7CDE;
+}
+
+.count span{
+    padding: 1px 5px; 
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.count i{
+    margin-left: 15px ;
+}
+
+.col2 span{
+    margin: 0 20px;
+}
+
+.col2 span.nama{
+    margin: 0;
+    font-size: 17px;
+}
+
+
+.search{
+    display: flex;
+    background-color: white;
+    width: 322px;
+    height: 48px;
+    padding: 15px 20px;
+    color: #ADADAD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.content .row form{
+    display: flex;
+}
+
+.content .row form .search input{
+    width: 260px;
+    border: none;
+    margin: 0 20px;
+}
+
+.content .row form .search input:focus{
+   outline: none;
+}
+
+.kategory1{
+    display: flex;
+    background-color: white;
+    width: 300px;
+    height: 48px;
+    padding: 10px 5px;
+    color: #ADADAD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.kategory2{
+    display: flex;
+    background-color: white;
+    width: 240px;
+    height: 48px;
+    padding: 10px;
+    color: #ADADAD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.kategory3{
+    display: flex;
+    background-color: white;
+    width: 240px;
+    height: 48px;
+    padding: 10px;
+    color: #ADADAD;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+form .kategory1 select{
+    width: 250px;
+    border: none;
+    margin: 0 20px;
+    outline: none;
+}
+
+form .kategory2 select{
+    width: 190px;
+    border: none;
+    margin: 0 20px;
+    outline: none;
+}
+
+form .kategory3 select{
+    width: 190px;
+    border: none;
+    margin: 0 20px;
+    outline: none;
+}
+
+
+form button{
+    width: 145px;
+    height: 48px;
+    background: linear-gradient(to left, #4A7CDE, #15ACCE);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+
+/* header */
+
+/* Dashboard */
+
+.content{
+    padding-top: 5%;
+    position: fixed;
+    top: 0;
+    left: 27%;
+    color: black;
+    font-family: Poppins;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    transition: all 0.5s ease;
+}
+
+
+
+.items{
+    display: flex;
+    margin-right: 85px;
+}
+
+.items span.icons, .items span.icons1{
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(90deg, #15ACCE 0.07%, #4A7CDE 100.07%);
+    padding: 20px 20px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.items span.icons1{
+    padding: 22px 22px;
+}
+
+.items .cl{
+    margin: 5px 20px;
+}
+
+.items .cl span.count{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.items .cl p{
+    font-size: 16px;
+    color: #ADADAD;
+}
+
+.icons1{
+    background: linear-gradient(90deg, #15ACCE 0.07%, #4A7CDE 100.07%);
+    padding: 12px 20px;
+    font-size: 22px;
+    color: white;
+    border-radius: 5px;
+}
+
+.card{
+    width: 208px;
+    height: 209px;
+    margin-left: 0px;
+    margin-right: 14px;
+    margin-bottom: 20px;
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.card p.nama{
+    margin: 5px 0;
+    font-style: normal;
+    color: black;
+    font-weight: bolder;
+}
+
+.card p{
+    font-size: 16px;
+    color: #ADADAD;
+    margin: 5px 0;
+    margin-bottom: 20px;
+}
+
+.card a{
+    text-decoration: none;
+    background-color: transparent;
+    border: #15ACCE solid 1px;
+    padding: 7px 20px;
+    color: #15ACCE;
+    border-radius: 5px;
+}
+
+form a.btn-white{
+    margin-left: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    border: #15ACCE solid 1px;
+    padding: 10px 20px;
+    color: #15ACCE;
+    border-radius: 5px;
+}
+
+a.btn-white:hover{
+    background: linear-gradient(270deg, #4A7CDE -5.45%, #15ACCE 100%);
+    color: white;
+}
+
+
+.recent-jobs .row h4{
+    font-size: 16px;
+    margin-right: 180px;
+}
+
+.recent-jobs .row h5{
+    font-size: 16px;
+    margin-right: 110px;
+}
+
+.recent-jobs .row h6{
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.recent-jobs .row h6.act{
+    font-size: 16px;
+    margin-left: 220px;
+}
+
+.card-jobs {
+    margin: 10px 0;
+    display: flex;
+    width: 72%;
+    height: 90px;
+    background-color: white;
+    padding: 25px 15px;
+    color: #ADADAD;
+}
+
+.card-jobs p{
+    width: 235px;
+    margin-top: 5px;
+}
+
+.card-jobs .profil{
+    width: 210px;
+    display: flex;
+    color: black;
+}
+
+.card-jobs .profil .circle{
+    margin: 0 -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px black;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.card-jobs .profil .circle img{
+    width: 20px;
+}
+
+.card-jobs .status {
+    width: 175px;
+    padding: 10px 0;
+}
+
+.card-jobs .status span.status{
+    background-color: #DAFFE999;
+    border-radius: 40px;
+    color: #31A15E;
+    text-align: center;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+.card-jobs .status .ending{
+    background-color: #ffb3b399;
+    border-radius: 40px;
+    color: red;
+    text-align: center;
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+.deadline{
+    width: 100px;
+}
+
+
+.indicator{
+    margin: 20px 0;
+    width: 150px;
+    height: 10px;
+    background-color: #DAF8FF;
+    border-radius: 15px;
+}
+
+.indicator .progress{
+    height: inherit;
+    position: relative;
+    border-radius: inherit;
+    width: 0%;
+    background: linear-gradient(89.82deg, #15ACCE -4.19%, #4A7CDE 106.96%);
+}
+
+
+.actions{
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.actions span{
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.actions span.biru{
+    background-color: #DAF8FF;
+    color: #4A7CDE;
+}
+
+.actions span.ungu{
+    background-color: #DAE0FF;
+    color: #4A59DE;
+}
+
+.actions span.hijau{
+    background-color: #DAFFE999;
+    color: #31A15E;
+}
+
+/* Dashboard */
+
+/* Jobs */
+
+.list-jobs{
+    width: 1100px;
+}
+
+.published-jobs{
+    width: 530px;
+    height: 310px;
+    background-color: white;
+    color: white;
+    margin: 10px;
+}
+
+.published-jobs .head{
+    width: inherit;
+    height: 200px;
+    background: linear-gradient(90deg, #15ACCE 0%, #4A7CDE 100%)
+}
+
+.published-jobs .head .title{
+    display: flex;
+}
+
+.published-jobs .head .title img{
+   width: 250px;
+   margin-top: 11px;
+   margin-left: 8px;
+   z-index: 1;
+}
+
+.published-jobs .head .title .p{
+    margin: auto;
+    width: 150px;
+    text-align: center;
+    font-size: 16px;
+ }
+
+ .published-jobs .head .title .status{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 3px 0;
+    color: #31A15E;
+    background-color: #DAFFE999;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+ }
+
+ .published-jobs .head .title .end{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    padding: 3px 0;
+    font-weight: bold;
+    background-color: #ffb3b399;;
+    color: red;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+ }
+
+ p.p-lg{
+    font-size: 20;
+ }
+
+ .published-jobs .head .menu{
+    display: flex;
+    color: black;
+    width: inherit;
+    position: absolute;
+    padding-left: 100px;
+    margin-top: -30px;
+    z-index: 2;
+ }
+
+ .published-jobs .head .pipeline, .candidates, .edit{
+    display: flex;
+    background-color: white;
+    border-radius: 160px;
+    height: 40px;
+    margin-right: 5px;
+ }
+
+ .published-jobs .head .pipeline{
+    width: 135px;
+    color: black;
+ }
+
+ .published-jobs .head .candidates{
+    width: 165px;
+    color: black;
+ }
+
+ .published-jobs .head .edit{
+    width: 100px;
+    color: black;
+ }
+
+ .published-jobs .head span.icon, span.icon1, span.icon2{
+    padding: 14px 15px;
+    border-radius: 50%;
+    font-size: 12px;
+    background-color: #4A7CDE;
+    color: white;
+ }
+
+ .published-jobs .head span.icon1{
+    padding: 12px 12px;
+ }
+
+ .published-jobs .head span.icon2{
+    padding: 13px 13px;
+ }
+ 
+
+ .published-jobs .head p{
+    margin: auto;
+ }
+
+ .published-jobs .body {
+    display: flex;
+    color: black;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.frame1{
+    width: 70%;
+    line-height: 30px;
+}
+
+.frame1 span{
+    margin-right: 20px;
+}
+
+
+.body span.i{
+    font-size: 7px;
+}
+
+.frame1 .p-lg{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+span.apply{
+    color: #ADADAD;
+    text-align: right;
+    font-size: 12px;
+}
+
+.circle{
+    margin: 0 -4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 1px black;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.frame2{
+    width: 30%;
+    text-align: right;
+    align-self: stretch;
+}
+
+.profils{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+.circle img{
+    width: 20px;
+}
+
+.rows{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Jobs */
+
+/* candidates */
+
+
+
+/* candidates */
+
+
+/* setting */
+
+.setting .rows p{
+    color: #ADADAD;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.setting .rows{
+    margin-bottom: 25px;
+}
+
+.setting input{
+    width: 470px;
+    height: 48px;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-right: 20px;
+    border: #15ACCE 1px solid;
+}
+
+.setting input:hover{
+    background-color: #fcfcfc;
+}
+
+.setting input:focus{
+    outline: transparent;
+    border: #4A7CDE 1px solid;
+    background-color: #fcfcfc;
+}
+
+.setting .input1 input{
+    width: 231px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+button.btn-setting{
+    margin-top: 10px;
+}
+
+form.setting{
+    height: 800px;
+}
+
+/* setting */
+
+/* detail */
+
+.col11 .card-candidates{
+    width: 282px;
+    height: 276px;
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.col11 .card-candidates .profile{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.col11 .card-candidates .profile img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.col11 .card-candidates p{
+    font-size: 17px;
+}
+
+.col11 .card-candidates p.category{
+    font-size: 15px;
+    color: #ADADAD;
+    margin-bottom: 30px;
+}
+
+.col11 .card-candidates a.btn{
+    padding: 8px 10px;
+    gap: 10px;
+    height: 48px;
+    font-size: 16px;
+}
+
+.col11 .card-candidates a.btn span{
+    margin: 0 10px;
+}
+
+.col11 .card-candidates1{
+    width: 282px;
+    height: 545px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.card-candidates1 .body{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card-candidates1 .body .icon{
+    padding: 15px;
+    background-color: #F0F5FF;
+    color: #4A7CDE;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.card-candidates1 .body .isi{
+    margin: 0 15px;
+    font-size: 15px;
+}
+
+.card-candidates1 .body .isi p{
+    width: 160px;
+    word-break: break-all;
+    max-lines: 2;
+}
+
+.card-candidates1 .body .isi p.label{
+    width: 250px;
+    color: #ADADAD;
+    margin-bottom: 3px;
+}
+
+.card-candidates1 .body .isi .sosial span{
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    object-fit: cover;
+    border: #15ACCE 1px solid;
+    color: #2196F3;
+    font-size: 12px;
+}
+
+.card-candidates1 .body .isi .sosial span:hover{
+    background-color: #15acce56;
+}
+
+
+
+.rows .col22 .menu{
+    width: 520px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.rows .col22 .menu .tabs{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+}
+
+.rows .col22 .menu .tabs input[type="radio"]{
+    display: none;
+}
+
+.rows .col22 .menu .tabs label{
+    width: 166px;
+    height: 48px;
+    padding: 13px 8px;
+    text-align: center;
+    background-color: white;
+    font-size: 13px;
+    border-radius: 5px;
+}
+
+.rows .col22 .menu .tabs label i{
+    color: #15ACCE;
+    margin-right: 10px;
+}
+.rows .col22 .menu .tabs .tab{
+    width: 100%;
+    order: 1;
+    display: none;
+}
+
+.rows .col22 .menu .tabs input[type="radio"]:checked + label + .tab{
+    display: block;
+    margin-top: 20px;
+}
+
+.rows .col22 .menu .tabs input[type="radio"]:checked + label{
+    background: linear-gradient(90deg, #15ACCE 0.34%, #4A7CDE 100.34%);
+    color: white;
+}
+
+.rows .col22 .menu .tabs input[type="radio"]:checked + label i  {
+    color: white;
+}
+
+.experience, .education, .evaluation{
+    padding: 15px;
+    color: #ADADAD;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.experience .rows p.title{
+    font-weight: bold;
+    color: #1E1E1E;
+    margin-right: 120px;
+}
+
+.experience .rows p.biru{
+    color: #4A7CDE;
+    margin-left: 5px;
+}
+
+.experience .card-experience, .education .card-education, .col33 .salary .card-salary, .notes .card-notes, .evaluation .card-attachment{
+    margin-top: 10px;
+   background-color: #F6F7FC;
+   padding: 16px;
+   display: flex;
+   border: 1px solid #15ACCE;
+}
+
+.experience .card-experience .dot, .education .card-education .dot, .salary .card-salary .dot{
+    color: #15ACCE;
+    padding-top: 8px;
+    font-size: 10px;
+    margin-right: 20px;
+}
+
+.experience .card-experience .rows{
+    color: #1E1E1E;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.education {
+    margin-top: 20px;
+    color: #1E1E1E;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+p.bold{
+    font-weight: bold;
+}
+
+.education p.biru{
+    color:#4A7CDE;
+    margin-right: 5px;
+}
+
+.col33 .salary{
+    font-size: 15px;
+    padding: 16px;
+    width: 272px;
+    height: 250px;
+    background: white;
+    border-radius: 5px;
+}
+
+p.light{
+    color: #ADADAD;
+    line-height: 30px;
+}
+
+.col33 .notes{
+    padding: 16px;
+    width: 272px;
+    height: 480px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.card-notes textarea{
+    width: 300px;
+    height: 150px;
+    background: transparent;
+    outline: none;
+    border: none;
+    resize: none;
+}
+
+.card-notes select{
+    width: 300px;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.notes .rows button{
+    margin-top: 10px;
+    width: 102px;
+    height: 48px;
+}
+
+.notes .rows button.btn{
+    padding: 12px 0;
+    margin-right: 35px;
+}
+
+.notes .rows button.btn:hover{
+    background:white;
+    color: #15ACCE;
+    border: 1px solid #15ACCE;
+}
+
+.notes .rows button.btn-white{
+    background:white;
+    color: #15ACCE;
+    border: 1px solid #15ACCE;
+}
+
+.notes .rows button.btn-white:hover{
+    background: linear-gradient(270deg, #4A7CDE -5.45%, #15ACCE 100%);
+    color: white;
+}
+
+
+.tab iframe{
+    width: 500px;
+    height:  682px;
+}
+
+.evaluation a{
+    padding: 10px 20px;
+}
+
+.evaluation a.btn-white{
+    margin-left: 195px;
+}
+
+.evaluation .card-attachment textarea{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.evaluation .card-attachment{
+    margin-bottom: 20px;
+}
+/* detail */
+
+/* applied */
+
+p.bold-lg{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cols1 .filter{
+    width: 242px;
+    height: 48px;
+    background: white;
+    padding: 8px 16px;
+    margin-top: 20px;
+}
+
+.cols1 .card-filter{
+    width: 242px;
+    height: 175px;
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px 16px;
+    border-radius: 5px;
+}
+
+.card-filter .container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #ADADAD;
+  }
+  
+  /* Hide the browser's default checkbox */
+.card-filter .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+.card-filter .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+  /* On mouse-over, add a grey background color */
+  .card-filter .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .card-filter .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .card-filter .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .card-filter .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .card-filter .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .card-filter form button{
+    margin-top: 30px; 
+  }
+
+  .cols2 .filter {
+    width: 830px;
+    margin-left: 20px;
+  }
+
+  .responsive-table{
+    width: 830px;
+    margin: 20px;
+  }
+
+  .responsive-table li {
+    padding: 13px 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .table-header {
+    background-color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .table-row {
+    background-color: #ffffff;
+  }
+  .col-1 {
+    flex-basis: 25%;
+  }
+
+  .col-1 img{
+    width: 50px;
+    height: 50px;
+    border-radius:50% ;
+    margin-right: 10px;
+  }
+
+  .col-1 p, .col-2 p{
+    margin: 12px 5px;
+  }
+  .col-2 {
+    flex-basis: 25%;
+  }
+  .col-3 {
+    flex-basis: 25%;
+  }
+
+  .col-3 .shape{
+    width: 150px;
+    height: 50px;
+    background-color: #DAFFE999;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: 40px;
+    margin: auto;
+  }
+
+  .col-4 {
+    flex-basis: 25%;
+  }
+ 
+/* applied */
+
+/* notif */
+
+.rows .icon-notif{
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    font-size: 40px;
+    color: #4A7CDE;
+    padding: 15px 18px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.rows .text{
+    justify-content: space-between;
+    width: 1000px;
+    height: 70px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 15px;
+    display: flex;
+    font-size: 16px;
+}
+
+.rows .text p.lights{
+    color: #ADADAD;
+    text-align: right;
+    margin: auto 0px;
+}
+
+.delete{
+    width: 1090px;;
+    text-align: right;
+    padding-top: 20px;
+}
+
+a.btn-delete{
+    padding: 10px 50px;
+}
+
+/*  */
+
+/* form-job */
+
+.create-job{
+    width: 1060px;
+    height: 1480px;
+    background: white;
+    padding: 16px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.bg-preview{
+    width: 1030px;
+    height: 520px;
+    background: #ADADAD;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.bg-preview #preview{
+    border-radius: 5px;
+    width: 1030px;
+    height: 520px;
+    object-fit: fill;
+}
+
+.job-title{
+    width: 1030px;
+    margin-top: 20px;
+}
+
+.job-title input, .skill select{
+    padding: 10px;
+    width: 1030px;
+    border: solid 1px #15ACCE;
+    background-color: #F6F7FC;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.job-detail{
+    margin-top: 20px;
+}
+
+.job-detail textarea{
+    width: 1030px;
+    resize: none;
+    border: solid 1px #15ACCE;
+    background-color: #F6F7FC;
+    padding: 16px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.job-detail textarea:focus, .job-title input:focus, .lainnya select:focus, .lainnya input:focus, .skill select:focus, .create-job2 select:focus, .create-job2 input:focus{
+    outline: none;
+    border: solid 1px #15ACCE;
+}
+
+.job-detail textarea:hover, .job-title input:hover, .lainnya select:hover, .lainnya input:hover, .skill select:hover, .create-job2 select:hover, .create-job2 input:hover{
+    background-color: #fcfcfc;
+}
+
+.lainnya{
+    display: flex;
+}
+
+.lainnya .cols1, .lainnya .cols2{
+     width: 50%;
+     margin-right: 20px;
+}
+
+.lainnya select, .lainnya input, .create-job2 select, .create-job2 input{
+    width: 505px;
+    height: 40px;  
+    margin: 10px 0;
+    padding: 0 16px;
+    border: solid 1px #15ACCE;
+    background-color: #F6F7FC;
+    border-radius: 5px;
+}
+
+.lainnya p{
+    margin-top: 10px;
+}
+
+.skill{
+    margin-top: 20px;
+}
+
+p.biru{
+    color: #15ACCE;
+    padding: 2px 5px;
+}
+
+.create-job2{
+    width: 1060px;
+    height: 350px;
+    background: white;
+    padding: 20px 16px; 
+    margin-top: 20px;
+    display: flex;
+    border-radius: 5px;
+}
+
+.create-job2 .cols1, .create-job2 .cols2{
+    width: 50%;
+    margin-right: 20px;
+}
+.btnnn{
+    margin-top: 20px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btnnn button.reset{
+    background: transparent;
+    border: #15ACCE solid 1px;
+    color: #15ACCE;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnnn button.reset:hover{
+    background: linear-gradient(270deg, #4A7CDE -5.45%, #15ACCE 100%);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+textarea{
+    color: #1E1E1E;
+}
+/*  */

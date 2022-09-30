@@ -1,0 +1,10 @@
+body{
+    margin-left: 50%;
+}
+.card{
+    margin-left: 50%;
+    color: black;
+    font-family: Poppins;
+    padding: 70px 0;
+    width: 100%;
+}
