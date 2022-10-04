@@ -75,7 +75,7 @@
         <div class="items">
             <span class="icons"><i class="fa-solid fa-users"></i></span>
             <div class="cl">
-                <span class="count">348</span>
+                <span class="count">0</span>
                 <p>Team Members</p>
             </div>
         </div>

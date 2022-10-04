@@ -62,7 +62,7 @@
                             <p class="light">City*</p>
                             <select name="city" id="" required>
                                 <option>Select City</option>
-                                <option value="<?= $job['country'] ?>" selected><?= $job['country']?></option>
+                                <option value="<?= $job['city'] ?>" selected><?= $job['city']?></option>
                                 <option value="Wonosobo">Wonosobo</option>
                                 <option value="Jakarta">Jakarta</option>
                                 <option value="Yogyakarta">Yogyakarta</option>
@@ -74,6 +74,7 @@
                             <p class="light">State*</p>
                             <select name="state" id="" required>
                                 <option>Select State</option>
+                                <option value="<?= $job['state'] ?>" selected><?= $job['state']?></option>
                                 <option value="Indonesia">Indonesia</option>
                                 <option value="Jepang">Jepang</option>
                                 <option value="Korea">Korea</option>
@@ -86,9 +87,10 @@
                         <p class="light">Add Skils*</p>
                         <select name="skill" id="" required>
                             <option>Select Skill</option>
-                            <option value="Indonesia">SQL</option>
-                            <option value="Jepang">Rest APi</option>
-                            <option value="Korea">DevOps</option>
+                            <option value="<?= $job['skill'] ?>" selected><?= $job['skill']?></option>
+                            <option value="SQL">SQL</option>
+                            <option value="Rest APi">Rest APi</option>
+                            <option value="DevOps">DevOps</option>
                         </select>
                     </div>
                 </div>
@@ -98,6 +100,7 @@
                     <p class="light">Employment Type*</p>
                     <select name="employment_type" required>
                         <option>Select Employment Type</option>
+                        <option value="<?= $job['employment_type'] ?>" selected><?= $job['employment_type']?></option>
                         <option value="Month">Full Time</option>
                         <option value="Years">Half Time</option>
                     </select>
@@ -105,6 +108,7 @@
                     <p class="light">Salary Type*</p>
                     <select name="salary_type" id="">
                         <option>Select Salary Type</option>
+                        <option value="<?= $job['salary_type'] ?>" selected><?= $job['salary_type']?></option>
                         <option value="Month">Month</option>
                         <option value="Years">Years</option>
                         <option value="Project">Project</option>
@@ -121,6 +125,7 @@
                     <p class="light">Experience Level*</p>
                     <select name="experience" id="" required>
                         <option>Select Experience Level</option>
+                        <option value="<?= $job['level_pengalaman'] ?>" selected><?= $job['level_pengalaman']?></option>
                         <option value="Intermadiate">Intermadiate Level</option>
                         <option value="Entry">Entry Level</option>
                         <option value="Mid">Mid Level</option>
